@@ -7,7 +7,7 @@ package SimpleConfig;
 #    free software; you can redistribute it and/or modify it under the
 #    same terms as Perl itself.
 # 
-# Last updated by gossamer on Wed Sep  2 13:58:08 EST 1998
+# Last updated by gossamer on Thu Sep  3 21:49:17 EST 1998
 #
 
 use strict;
@@ -19,9 +19,9 @@ require Exporter;
 @EXPORT = qw();
 @EXPORT_OK = qw();
 
-$VERSION = "0.2";
+$VERSION = "0.3";
 
-my $DEBUG = 1;
+my $DEBUG = 0;
 
 =head1 NAME
 
@@ -120,13 +120,13 @@ sub parse {
 }
 
 =pod
-=item get_value ( DIRECTIVE )
+=item get ( DIRECTIVE )
 
 Returns the parsed value for that directive.
 
 =cut
 
-sub get_value {
+sub get {
    my $self = shift;
    my $key = shift;
 
@@ -138,7 +138,7 @@ sub parse_line {
 
    my ($key, $value);
 
-   if ($text =~ /^\s*(\w+)\s+(.*)?\s*$/) {
+   if ($text =~ /^\s*(\w+)\s+['"]?(.*?)['"]?\s*$/) {
       $key = $1;
       $value = $2;
    } else {
@@ -169,9 +169,9 @@ ignored.
 
 Always die()s on errors instead of reporting them.
 
-C<get_value()> doesn't warn if used before C<parse()>.
+C<get()> doesn't warn if used before C<parse()>.
 
-C<get_value()> doesn't warn if you try to acces the value of an
+C<get()> doesn't warn if you try to acces the value of an
 unknown directive not know (ie: one that wasn't passed via C<new()>).
 
 All these will be addressed in future releases.
