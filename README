@@ -1,0 +1,24 @@
+
+SimpleConfig
+
+
+Designed to be simpler than the ConfigReader module, firstly it
+seemed like overkill for what I wanted, and secondly I couldn't
+figure it out :)
+
+At this early stage (ie:  I coded it last night) it's still got
+some major limitations/bugs - see the pod docs for details.
+
+And the 'make test' stuff is completely rudimentary.  More will
+follow.
+
+
+Contacting me:  gossamer@tertius.net.au is best.
+
+
+ObLegalStuff:
+   Copyright (c) 1998 Bek Oberin. All rights reserved. This program is
+   free software; you can redistribute it and/or modify it under the
+   same terms as Perl itself.
+
+
