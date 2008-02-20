@@ -1,24 +1,66 @@
+NAME
 
 SimpleConfig
 
+VERSION
 
-Designed to be simpler than the ConfigReader module, firstly it
-seemed like overkill for what I wanted, and secondly I couldn't
-figure it out :)
+ 0.01
+ 
+ 
+DECRIPTION
 
-At this early stage (ie:  I coded it last night) it's still got
-some major limitations/bugs - see the pod docs for details.
+ Provides a convenient way for loading   config values from a given file and
+  returns it as a hash structure, allows interpolation for the   perl scalars ( $xxxx ${xxx} )
+  and inside of XML fragments as well.
+  Also, it can run interactive session with user, use predefined prompts, use validation patterns
+  and store back into the file, preserving the original order of the comments and definitions.
+    Motivation behind this module was inspired by Config::General module which was missing required
+  functionality ( preservation of the comments order and positioining, prompts and validation for 
+  command line based UI ). Basically, this is Yet-Another-Config-Module with some subset of the
+  functionality and list of features found to be useful. 
+  
 
-And the 'make test' stuff is completely rudimentary.  More will
-follow.
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+	perl Makefile.PL
+	make
+	make test
+	make install
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module with the
+perldoc command.
+
+    perldoc SimpleConfig
+
+You can also look for information at:
+
+    RT, CPAN's request tracker
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=SimpleConfig
+
+    AnnoCPAN, Annotated CPAN documentation
+        http://annocpan.org/dist/SimpleConfig
+
+    CPAN Ratings
+        http://cpanratings.perl.org/d/SimpleConfig
+
+    Search CPAN
+        http://search.cpan.org/dist/SimpleConfig
 
 
-Contacting me:  gossamer@tertius.net.au is best.
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2007-2008,  Fermi Reasearch Alliance (FRA)  
+
+You should have received a copy of the Fermitools license
+with this software.  If not, see <http://fermitools.fnal.gov/about/terms.html>
 
 
-ObLegalStuff:
-   Copyright (c) 1998 Bek Oberin. All rights reserved. This program is
-   free software; you can redistribute it and/or modify it under the
-   same terms as Perl itself.
+AUTHOR
 
+Maxim Grigoriev, <maxim |AT| fnal.gov>
 

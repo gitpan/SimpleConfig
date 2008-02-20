@@ -1,8 +1,8 @@
-SimpleConfig.pm
+Changes
 MANIFEST
 Makefile.PL
 README
-example.pl
-example.config
-test.pl
-Changes
+lib/SimpleConfig.pm
+t/00-load.t
+t/pod-coverage.t
+t/pod.t

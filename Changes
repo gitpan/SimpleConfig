@@ -1,9 +1,5 @@
+Revision history for SimpleConfig
 
-
-New in 0.03
-   Doesn't get confused by trailing whitespace
-
-   Copes with quote-delimited strings as long as they're all on the same
-   line.
-
+0.01    2/19/2008 
+        First version, released on an unsuspecting world.
 

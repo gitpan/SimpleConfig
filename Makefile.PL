@@ -1,36 +1,15 @@
-#
-# Skeleton Perl Makefile
-#
-# Last updated by gossamer on Wed Sep  2 13:52:39 EST 1998
-#
-
-require 5;
 use strict;
-
+use warnings;
 use ExtUtils::MakeMaker;
+
 WriteMakefile(
-    'NAME'	   => 'SimpleConfig',
-    'VERSION_FROM' => 'SimpleConfig.pm',
-
-    'dist'         => { 
-                         COMPRESS => 'gzip -9f',
-                         SUFFIX => '.gz',
-                      },
+    NAME                => 'SimpleConfig',
+    AUTHOR              => 'Maxim Grigoriev <maximgrp@fnal.gov>',
+    VERSION_FROM        => 'lib/SimpleConfig.pm',
+    PL_FILES            => {},
+    PREREQ_PM => {
+        'Test::More' => 0, 'Data::Dumper' => 0, 'XML::Simple' => 0, 'Carp' => 0
+    },
+    dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
+    clean               => { FILES => 'SimpleConfig-*' },
 );
-
-sub MY::postamble {
-   package MY;
-
-   '
-
-WEBDIR = /home/gossamer/websrc/docs/code
-WEB_FILELIST = $(WEBDIR)/file-list
-
-webdist: dist
-	@$(MKPATH) $(WEBDIR)/$(DISTNAME)/
-	cp $(DISTVNAME).tar$(SUFFIX) $(WEBDIR)/$(DISTNAME)/
-	cp README $(WEBDIR)/$(DISTNAME)/$(DISTVNAME).README
-
-'
-}
-
